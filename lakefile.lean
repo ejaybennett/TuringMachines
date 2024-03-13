@@ -1,17 +1,14 @@
 import Lake
 open Lake DSL
 
-package «TuringMachines» where
-  -- Settings applied to both builds and interactive editing
-  leanOptions := #[
-    ⟨`pp.unicode.fun, true⟩, -- pretty-prints `fun a ↦ b`
-    ⟨`pp.proofs.withType, false⟩
-  ]
-  -- add any additional package configuration options here
-
-require mathlib from git
-  "https://github.com/leanprover-community/mathlib4.git"
+package «lean4-example» {
+  -- add package configuration options here
+}
 
 @[default_target]
-lean_lib «TuringMachines» where
-  -- add any library configuration options here
+lean_lib «Lean4Example» {
+  -- add library configuration options here
+}
+
+require mathlib from git
+  "https://github.com/leanprover-community/mathlib4.git" @ "a9a186c1be45e4f306d0d7649facfb59b17bd996"
