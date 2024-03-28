@@ -43,4 +43,4 @@ match cfg1 with
 )
 | none => none
 
-theorem my_machine_terminates : ∃ n , step_n my_machine (some my_cfg) n = none := by
+theorem my_machine_terminates : ∃ n , step_n my_machine (some my_cfg) n = none := by eval(5)
